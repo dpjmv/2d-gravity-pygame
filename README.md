@@ -11,7 +11,8 @@ python gravity.py
 You can fine tune some options in `gravity.py`
 
 Keyboard shortcuts:
-- f - show FPS
+- r - restart the simulation
+- f - toggle show FPS
 - e - toggle bouncy edge
 - v - toggle velocity vectors
 
