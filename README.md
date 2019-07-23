@@ -1,6 +1,6 @@
 # 2d-gravity-pygame
 
-Simulating gravity in 2 dimentsions using pygame and python
+Simulating gravity in 2 dimensions using pygame and python
 
 # Usage
 
@@ -12,8 +12,8 @@ You can fine tune some options in `gravity.py`
 
 Keyboard shortcuts:
 - f - show FPS
-- e - toggle bouncy_edge
-- v - show velocity vectors
+- e - toggle bouncy edge
+- v - toggle velocity vectors
 
 # Requires
 - numpy
