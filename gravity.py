@@ -69,8 +69,12 @@ class Game:
                 b = self.bodies[j]
 
                 if RigidBody.collide(a, b):
-                    new_x = (a.pos[0] + b.pos[0]) / 2
-                    new_y = (a.pos[1] + b.pos[1]) / 2
+                    # use center of mass
+                    new_x = ((a.pos[0] * a.mass) + (b.pos[0] * b.mass)) / \
+                            (a.mass + b.mass)
+                    new_y = ((a.pos[1] * a.mass) + (b.pos[1] * b.mass)) / \
+                            (a.mass + b.mass)
+
                     new_mass = a.mass + b.mass
                     p_a = [a.mass * a.vel[0], a.mass * a.vel[1]] # momentum
                     p_b = [b.mass * b.vel[0], b.mass * b.vel[1]]
@@ -92,7 +96,7 @@ class Game:
         old_bodies = list(dict.fromkeys(old_bodies)) # Remove duplicates
         old_bodies.sort(reverse=True)
         for body_index in old_bodies:
-            del self.bodies[body_index] 
+            del self.bodies[body_index]
             
         self.bodies += new_bodies
 
