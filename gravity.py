@@ -74,11 +74,7 @@ class Game:
                             (a.mass + b.mass)
                     new_y = ((a.pos[1] * a.mass) + (b.pos[1] * b.mass)) / \
                             (a.mass + b.mass)
-<<<<<<< HEAD
                     
-=======
-
->>>>>>> b5aa63be3026a8bb2c901a78065e14c350908ef4
                     new_mass = a.mass + b.mass
                     p_a = [a.mass * a.vel[0], a.mass * a.vel[1]] # momentum
                     p_b = [b.mass * b.vel[0], b.mass * b.vel[1]]

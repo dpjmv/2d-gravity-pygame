@@ -10,7 +10,7 @@ class RigidBody:
 
         self.mass = mass
         if not mass:
-            self.mass = 1
+            self.mass = random.uniform(1, 4)
 
         if not pos:
             width = game.params["screen_size"][0]
