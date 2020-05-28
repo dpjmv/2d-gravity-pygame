@@ -15,7 +15,7 @@ class Game:
             "screen_size": (1000, 600),
             "fps": 60,
             "max_speed": 100, # pixels/second
-            "gravitational_constant": 50000.0, # with pixels as distance unit
+            "gravitational_constant": 10000.0, # with pixels as distance unit
             "radius_scale": 2.0,
             "bg_color": pygame.Color(0, 0, 0),
             "body_count": 100,

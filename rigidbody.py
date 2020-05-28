@@ -42,7 +42,11 @@ class RigidBody:
         d_squared = dx * dx + dy * dy
         d = d_squared ** 0.5
         
-        magnitude = (G * m1 * m2) / d_squared
+        if (d_squared > 0):
+            magnitude = (G * m1 * m2) / d_squared
+        else:
+            magnitude = 1
+            d = 1
         dx_normalized_scaled = dx / d * magnitude
         dy_normalized_scaled = dy / d * magnitude
 
@@ -100,10 +104,10 @@ class RigidBody:
 
     def move(self):
         dt = self.game.dt
-        self.pos[0] += self.vel[0] * dt
-        self.pos[1] += self.vel[1] * dt
         self.vel[0] += self.forces[0] * dt / self.mass # acceleration
         self.vel[1] += self.forces[1] * dt / self.mass
+        self.pos[0] += self.vel[0] * dt
+        self.pos[1] += self.vel[1] * dt
         self.forces = [0.0, 0.0]
 
     def draw(self):
